@@ -48,7 +48,8 @@ function Edprofile(props) {
               <View style={styles.rect}></View>
             </View>
             <View style={styles.group9}>
-              <Text style={styles.eddname}>Edit Display Name</Text>
+            <Text style={styles.eddname}>Edit Display Name</Text>
+
               <TextInput
                 placeholder="Xekhai"
                 style={styles.textInput}
@@ -211,7 +212,6 @@ const styles = StyleSheet.create({
   },
   group9: {
     alignSelf: "stretch",
-    margin: 0,
     marginRight: 30,
     marginLeft: 30,
     marginTop: 6,
@@ -222,9 +222,6 @@ const styles = StyleSheet.create({
     color: "rgba(156,153,153,1)",
     fontSize: 10,
     marginTop: 10,
-    height: 14,
-    left: 63,
-    top: 25,
     alignSelf: "stretch"
   },
   textInput: {

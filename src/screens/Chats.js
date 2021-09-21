@@ -6,25 +6,25 @@ import Icon from "react-native-vector-icons/FontAwesome";
 function Chats(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.imageStack}>
+      <View style={styles.bgStack}>
         <Center vertical>
           <Image
             source={require("../assets/images/BG-23.jpg")}
             resizeMode="cover"
-            style={styles.image}
+            style={styles.bg}
           ></Image>
         </Center>
-        <View style={styles.group5}>
+        <View style={styles.cont}>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Home")}
-            style={styles.button}
+            style={styles.back}
           >
             <Icon name="arrow-left" style={styles.icon}></Icon>
-            <Text style={styles.text}>Chats</Text>
+            <Text style={styles.chatz}>Chats</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Chat")}
-            style={styles.button2}
+            style={styles.chaat}
           >
             <Image
               source={require("../assets/images/whatsapp-image-2021-05-01-at-4.18.07-pm-696x10421.jpg")}
@@ -34,14 +34,14 @@ function Chats(props) {
             <View style={styles.group3}>
               <View style={styles.group2}>
                 <Text style={styles.drOsioxekhai}>Dr. Osioxekhai</Text>
-                <Text style={styles.loremIpsum}>9:00PM</Text>
+                <Text style={styles.tlstmess}>9:00PM</Text>
               </View>
-              <Text style={styles.loremIpsum2}>
+              <Text style={styles.lstmess}>
                 I have seen your results, you are good...
               </Text>
             </View>
           </TouchableOpacity>
-          <View style={styles.rect}></View>
+          <View style={styles.div}></View>
         </View>
       </View>
     </View>
@@ -52,20 +52,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  image: {
+  bg: {
     left: 0,
     width: 375,
     position: "absolute",
     height: 812
   },
-  group5: {
+  cont: {
     top: 0,
     left: 1,
     position: "absolute",
     right: 0,
     bottom: 0
   },
-  button: {
+  back: {
     backgroundColor: "rgba(118,213,203,1)",
     shadowColor: "rgba(0,0,0,1)",
     shadowOffset: {
@@ -86,14 +86,14 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     marginLeft: 30
   },
-  text: {
+  chatz: {
     fontFamily: "comic-sans-ms-regular",
     color: "rgba(255,255,255,1)",
     fontSize: 24,
     alignSelf: "center",
     margin: 0
   },
-  button2: {
+  chaat: {
     flexDirection: "row",
     alignSelf: "stretch",
     alignItems: "center"
@@ -121,23 +121,23 @@ const styles = StyleSheet.create({
     color: "#121212",
     fontSize: 18
   },
-  loremIpsum: {
+  tlstmess: {
     fontFamily: "comic-sans-ms-regular",
     color: "rgba(118,213,203,1)",
     fontSize: 18
   },
-  loremIpsum2: {
+  lstmess: {
     fontFamily: "comic-sans-ms-regular",
     color: "rgba(2,0,0,1)",
     alignSelf: "stretch"
   },
-  rect: {
+  div: {
     width: 279,
     height: 1,
     backgroundColor: "#E6E6E6",
     alignSelf: "center"
   },
-  imageStack: {
+  bgStack: {
     flex: 1,
     marginLeft: -1
   }

@@ -2,42 +2,42 @@ import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text, Image } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-function Speci(props) {
+function Officers(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.group5}>
-        <View style={styles.rect6}>
+      <View style={styles.group6}>
+        <View style={styles.rect4}>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Home")}
             style={styles.button3}
           >
             <Icon name="chevron-left" style={styles.icon1}></Icon>
           </TouchableOpacity>
-          <Text style={styles.bookAppointments1}>Book Appointments</Text>
+          <Text style={styles.bookAppointments}>Book Appointments</Text>
         </View>
-        <View style={styles.group7}>
-          <Text style={styles.specialists}>Specialists</Text>
-          <View style={styles.rect4}></View>
+        <View style={styles.group1}>
+          <Text style={styles.medicalOfficers}>Specialists</Text>
+          <View style={styles.rect2}></View>
         </View>
         <TouchableOpacity
           onPress={() => props.navigation.navigate("Infospec")}
-          style={styles.topc}
+          style={styles.group4}
         >
           <Image
             source={require("../assets/images/call-center-agent.png")}
             resizeMode="contain"
-            style={styles.image1}
+            style={styles.image}
           ></Image>
-          <View style={styles.group9}>
-            <Text style={styles.loremIpsum3}>Dr. Osioxekhai (Neurologist)</Text>
-            <View style={styles.rect5}></View>
-            <View style={styles.group10}>
-              <Text style={styles.loremIpsum4}>4/5</Text>
+          <View style={styles.group3}>
+            <Text style={styles.loremIpsum}>Dr. Osioxekhai (Neurologist)</Text>
+            <View style={styles.rect3}></View>
+            <View style={styles.group2}>
+              <Text style={styles.loremIpsum2}>4/5</Text>
               <TouchableOpacity
                 onPress={() => props.navigation.navigate("Infospec")}
-                style={styles.button4}
+                style={styles.button2}
               >
-                <Text style={styles.bookNow1}>Book Now</Text>
+                <Text style={styles.bookNow}>Book Now</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -51,10 +51,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  group5: {
+  group6: {
     flex: 1
   },
-  rect6: {
+  rect4: {
     alignItems: "center",
     alignSelf: "stretch",
     backgroundColor: "rgba(255,255,255,1)",
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     shadowOpacity: 0.3,
     shadowRadius: 0,
-    height: 150,
+    height: 120,
     justifyContent: "flex-end"
   },
   button3: {
@@ -94,14 +94,15 @@ const styles = StyleSheet.create({
     fontSize: 25,
     alignSelf: "center"
   },
-  bookAppointments1: {
+  bookAppointments: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     alignSelf: "center",
     margin: 0,
-    marginBottom: 11
+    padding: 0,
+    marginBottom: 8
   },
-  group7: {
+  group1: {
     flexDirection: "row",
     justifyContent: "flex-start",
     marginTop: 11,
@@ -109,18 +110,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     alignSelf: "center"
   },
-  specialists: {
+  medicalOfficers: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     marginRight: 8
   },
-  rect4: {
+  rect2: {
     height: 2,
     backgroundColor: "rgba(190,190,190,1)",
     width: 150,
     alignSelf: "center"
   },
-  button4: {
+  button2: {
     flexDirection: "row",
     width: 100,
     height: 24,
@@ -129,50 +130,59 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(74,144,226,1)",
     borderRadius: 100
   },
-  image1: {
+  image: {
     width: 80,
     height: 80
   },
-  group9: {
+  group3: {
     width: 182,
     height: 62,
     alignItems: "center",
-    justifyContent: "space-around"
+    justifyContent: "space-between"
   },
-  loremIpsum3: {
+  group4: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(255,255,255,1)",
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.39,
+    shadowRadius: 0,
+    borderRadius: 5,
+    padding: 14,
+    width: 290,
+    alignSelf: "center",
+
+    height: 'auto'
+  },
+  loremIpsum: {
     fontFamily: "roboto-regular",
     color: "#121212"
   },
-  rect5: {
+  rect3: {
     width: 182,
     height: 1,
     backgroundColor: "#E6E6E6"
   },
-  group10: {
+  group2: {
     width: 161,
     height: 24,
     flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-around"
+    justifyContent: "space-between",
+    alignItems: "center"
   },
-  loremIpsum4: {
+  loremIpsum2: {
     fontFamily: "roboto-regular",
     color: "#121212"
   },
-  topc: {
-    flexDirection: "row",
-    alignSelf: "center",
-    justifyContent: "center",
-    backgroundColor: "white",
-    borderRadius: 5,
-    padding:5,
-    elevation : 5
-  },
- 
-  bookNow1: {
+  bookNow: {
     fontFamily: "comic-sans-ms-regular",
     color: "rgba(255,255,255,1)"
   }
 });
 
-export default Speci;
+export default Officers;

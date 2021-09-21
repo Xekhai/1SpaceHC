@@ -15,7 +15,7 @@ function MaterialBasicFooter(props) {
         <Text style={styles.home}>Home</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => console.log("Navigate to Chats")}
+        onPress={() => props.navigation.navigate("Notif")}
         style={styles.activebtnWrapper}
       >
         <MaterialCommunityIconsIcon
@@ -25,13 +25,16 @@ function MaterialBasicFooter(props) {
         <Text style={styles.chats}>Chats</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => console.log("Navigate to Settings")}
+        onPress={() => props.navigation.navigate("Notif")}
         style={styles.btnWrapper2}
       >
         <IoniconsIcon name="md-settings" style={styles.icon2}></IoniconsIcon>
         <Text style={styles.settings}>Settings</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btnWrapper3}>
+      <TouchableOpacity style={styles.btnWrapper3}
+             onPress={() => props.navigation.navigate("Notif")}
+ 
+      >
         <Image
           source={require("../assets/images/online-payment.png")}
           resizeMode="contain"

@@ -33,12 +33,11 @@ function Notif(props) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center"
+    flex: 1
   },
   group7: {
     alignItems: "center",
-    height: 812
+    flex: 1
   },
   rect: {
     backgroundColor: "rgba(118,213,203,1)",

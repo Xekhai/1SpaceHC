@@ -28,20 +28,10 @@ function Voicecall(props) {
             style={styles.image2}
           ></Image>
         </View>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate("Chat")}
-          style={styles.button}
-        >
-          <Image
-            source={require("../assets/images/phone-call-end.png")}
-            resizeMode="contain"
-            style={styles.image3}
-          ></Image>
-        </TouchableOpacity>
         <View style={styles.group6}>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Chat")}
-            style={styles.button3}
+            style={styles.end2}
           >
             <Image
               source={require("../assets/images/end-call.png")}
@@ -51,7 +41,7 @@ function Voicecall(props) {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Videocall")}
-            style={styles.button4}
+            style={styles.vid}
           >
             <Image
               source={require("../assets/images/video-camera_(1).png")}
@@ -120,22 +110,9 @@ const styles = StyleSheet.create({
   },
   image2: {
     width: 375,
-    height: 443,
+    height: 523,
     alignSelf: "stretch",
     flex: 1
-  },
-  button: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(118,213,203,1)",
-    alignSelf: "stretch"
-  },
-  image3: {
-    width: 40,
-    height: 40,
-    marginTop: 20,
-    marginBottom: 20
   },
   group6: {
     flexDirection: "row",
@@ -143,7 +120,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255,1)",
     alignSelf: "stretch"
   },
-  button3: {
+  end2: {
     backgroundColor: "rgba(230, 230, 230,1)",
     borderRadius: 100,
     margin: 25,
@@ -156,7 +133,7 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 0
   },
-  button4: {
+  vid: {
     backgroundColor: "rgba(230, 230, 230,1)",
     borderRadius: 100,
     margin: 25,

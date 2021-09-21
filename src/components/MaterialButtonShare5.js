@@ -5,7 +5,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 function MaterialButtonShare5(props) {
   return (
     <TouchableOpacity style={[styles.container, props.style]}>
-      <Icon name="xing" style={styles.icon}></Icon>
+      <Icon name="times" style={styles.icon}></Icon>
     </TouchableOpacity>
   );
 }

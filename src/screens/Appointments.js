@@ -13,15 +13,15 @@ import MaterialButtonPurple from "../components/MaterialButtonPurple";
 function Appointments(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.group7}>
-        <View style={styles.rect8}>
+      <View style={styles.bg}>
+        <View style={styles.header}>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Home")}
-            style={styles.button1}
+            style={styles.ack}
           >
             <Icon name="chevron-left" style={styles.icon1}></Icon>
           </TouchableOpacity>
-          <Text style={styles.text}>Appointments</Text>
+          <Text style={styles.appoin}>Appointments</Text>
         </View>
         <View style={styles.scrollArea}>
           <ScrollView
@@ -30,31 +30,32 @@ function Appointments(props) {
           >
             <TouchableOpacity
               onPress={() => props.navigation.navigate("Chats")}
-              style={styles.button2}
+              style={styles.app1}
             >
-              <View style={styles.group6}>
-                <View style={styles.group2}>
+              <View style={styles.tdate}>
+                <View style={styles.timegrop}>
                   <Text style={styles.time}>Time</Text>
-                  <Text style={styles.loremIpsum}>9:00 AM</Text>
+                  <Text style={styles.timeit}>9:00 AM</Text>
                 </View>
-                <View style={styles.group3}>
+                <View style={styles.dategroup}>
                   <Text style={styles.date}>Date</Text>
-                  <Text style={styles.loremIpsum2}>12/11/10</Text>
+                  <Text style={styles.dateit}>12/11/10</Text>
                 </View>
               </View>
-              <View style={styles.rect}></View>
+              <View style={styles.div}></View>
               <Text style={styles.drOsioxekhai}>Dr. Osioxekhai</Text>
-              <View style={styles.rect1}></View>
-              <View style={styles.group4}>
+              <View style={styles.div2}></View>
+              <View style={styles.cancchat}>
                 <MaterialButtonSuccess1
                   style={styles.materialButtonSuccess1}
                 ></MaterialButtonSuccess1>
                 <MaterialButtonPurple
                   style={styles.materialButtonPurple}
+                  onPress={() => props.navigation.navigate("Chats")}
                 ></MaterialButtonPurple>
               </View>
             </TouchableOpacity>
-            <View style={styles.group8}>
+            <View style={styles.duper2}>
               <View style={styles.rect2}>
                 <View style={styles.rect3}>
                   <Text style={styles.time2}>Time</Text>
@@ -88,13 +89,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  group7: {
+  bg: {
     alignItems: "center",
-    width: 375,
-    flex: 1,
-    alignSelf: "center"
+    flex: 1
   },
-  rect8: {
+  header: {
     backgroundColor: "rgba(255,255,255,1)",
     shadowColor: "rgba(0,0,0,1)",
     shadowOffset: {
@@ -108,7 +107,7 @@ const styles = StyleSheet.create({
     height: 120,
     justifyContent: "flex-end"
   },
-  button1: {
+  ack: {
     flexDirection: "row",
     alignSelf: "flex-start",
     width: 50,
@@ -133,7 +132,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     alignSelf: "center"
   },
-  text: {
+  appoin: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 16,
@@ -149,7 +148,7 @@ const styles = StyleSheet.create({
   scrollArea_contentContainerStyle: {
     height: 692
   },
-  button2: {
+  app1: {
     backgroundColor: "rgba(255,255,255,1)",
     shadowColor: "rgba(0,0,0,1)",
     shadowOffset: {
@@ -164,44 +163,42 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     alignItems: "center"
   },
-  group6: {
+  tdate: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "stretch",
     margin: 7
   },
-  group2: {
-    width: 51,
-    height: 45,
+  timegrop: {
     alignItems: "center",
     justifyContent: "space-around",
-    margin: 10
+    margin: 10,
+    alignSelf: "flex-start"
   },
   time: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  loremIpsum: {
+  timeit: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  group3: {
-    width: 59,
-    height: 45,
+  dategroup: {
     alignItems: "center",
     justifyContent: "space-around",
-    margin: 10
+    margin: 10,
+    alignSelf: "flex-start"
   },
   date: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  loremIpsum2: {
+  dateit: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  rect: {
+  div: {
     width: 220,
     height: 2,
     backgroundColor: "#E6E6E6",
@@ -214,13 +211,13 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     margin: 7
   },
-  rect1: {
+  div2: {
     width: 220,
     height: 2,
     backgroundColor: "#E6E6E6",
     margin: 7
   },
-  group4: {
+  cancchat: {
     flexDirection: "row",
     justifyContent: "center",
     alignSelf: "stretch",
@@ -236,7 +233,7 @@ const styles = StyleSheet.create({
     width: 115,
     margin: 10
   },
-  group8: {
+  duper2: {
     backgroundColor: "rgba(255,255,255,1)",
     shadowColor: "rgba(0,0,0,1)",
     shadowOffset: {
@@ -259,11 +256,10 @@ const styles = StyleSheet.create({
     margin: 7
   },
   rect3: {
-    width: 51,
-    height: 45,
     alignItems: "center",
     justifyContent: "space-around",
-    margin: 10
+    margin: 10,
+    alignSelf: "flex-start"
   },
   time2: {
     fontFamily: "comic-sans-ms-regular",
@@ -274,11 +270,10 @@ const styles = StyleSheet.create({
     color: "#121212"
   },
   rect4: {
-    width: 59,
-    height: 45,
     alignItems: "center",
     justifyContent: "space-around",
-    margin: 10
+    margin: 10,
+    alignSelf: "flex-start"
   },
   date2: {
     fontFamily: "comic-sans-ms-regular",

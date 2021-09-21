@@ -14,80 +14,78 @@ function Signupas(props) {
       <ImageBackground
         source={require("../assets/images/v870-tang-365.jpg")}
         resizeMode="cover"
-        style={styles.image}
-        imageStyle={styles.image_imageStyle}
+        style={styles.bg}
+        imageStyle={styles.bg_imageStyle}
       >
-        <View style={styles.group4}>
-          <View style={styles.group}>
-            <Text style={styles.text}>Signup as</Text>
-            <View style={styles.group2}>
-              <TouchableOpacity
-                onPress={() => props.navigation.navigate("Signup")}
-                style={styles.button2}
-              >
-                <Image
-                  source={require("../assets/images/medical-staff.png")}
-                  resizeMode="contain"
-                  style={styles.image2}
-                ></Image>
-                <Text style={styles.medicalOfficerGp}>
-                  Medical{"\n"}Officer/GP
-                </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => props.navigation.navigate("Signup")}
-                style={styles.button3}
-              >
-                <Image
-                  source={require("../assets/images/office-worker.png")}
-                  resizeMode="contain"
-                  style={styles.image3}
-                ></Image>
-                <Text style={styles.specialist}>Specialist</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={styles.group3}>
-              <TouchableOpacity
-                onPress={() => props.navigation.navigate("Signup")}
-                style={styles.button4}
-              >
-                <Image
-                  source={require("../assets/images/diagnostic.png")}
-                  resizeMode="contain"
-                  style={styles.image4}
-                ></Image>
-                <Text style={styles.medicalDiagnostics}>
-                  Medical{"\n"}Diagnostics
-                </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => props.navigation.navigate("Signup")}
-                style={styles.button5}
-              >
-                <Image
-                  source={require("../assets/images/pharmacy_(1).png")}
-                  resizeMode="contain"
-                  style={styles.image5}
-                ></Image>
-                <Text style={styles.pharmacyServices}>
-                  Pharmacy{"\n"}Services
-                </Text>
-              </TouchableOpacity>
-            </View>
+        <View style={styles.mcontainer}>
+          <Text style={styles.signas}>Signup as</Text>
+          <View style={styles.line1}>
             <TouchableOpacity
               onPress={() => props.navigation.navigate("Signup")}
-              style={styles.button6}
+              style={styles.mofficer}
             >
               <Image
-                source={require("../assets/images/ambulance.png")}
+                source={require("../assets/images/medical-staff.png")}
                 resizeMode="contain"
-                style={styles.image6}
+                style={styles.offimg}
               ></Image>
-              <Text style={styles.ambulanceServices}>
-                Ambulance{"\n"}Services
+              <Text style={styles.medicalOfficerGp}>
+                Medical{"\n"}Officer/GP
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate("Signup")}
+              style={styles.speci}
+            >
+              <Image
+                source={require("../assets/images/office-worker.png")}
+                resizeMode="contain"
+                style={styles.specimg}
+              ></Image>
+              <Text style={styles.specialist}>Specialist</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.line2}>
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate("Signup")}
+              style={styles.diag}
+            >
+              <Image
+                source={require("../assets/images/diagnostic.png")}
+                resizeMode="contain"
+                style={styles.diagimg}
+              ></Image>
+              <Text style={styles.medicalDiagnostics}>
+                Medical{"\n"}Diagnostics
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate("Signup")}
+              style={styles.pharm}
+            >
+              <Image
+                source={require("../assets/images/pharmacy_(1).png")}
+                resizeMode="contain"
+                style={styles.pharmimg}
+              ></Image>
+              <Text style={styles.pharmacyServices}>
+                Pharmacy{"\n"}Services
               </Text>
             </TouchableOpacity>
           </View>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate("Signup")}
+            style={styles.ambu}
+          >
+            <Image
+              source={require("../assets/images/ambulance.png")}
+              resizeMode="contain"
+              style={styles.ambimg}
+            ></Image>
+            <Text style={styles.ambulanceServices}>
+              Ambulance{"\n"}Services
+            </Text>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     </View>
@@ -98,15 +96,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  image: {
+  bg: {
     flex: 1
   },
-  image_imageStyle: {},
-  group4: {
-    justifyContent: "center",
-    flex: 1
-  },
-  group: {
+  bg_imageStyle: {},
+  mcontainer: {
     backgroundColor: "rgba(255,255,255,1)",
     borderRadius: 6,
     shadowColor: "rgba(0,0,0,1)",
@@ -118,17 +112,17 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.32,
     shadowRadius: 0,
     width: 277,
-    justifyContent: "center",
     alignItems: "center",
-    alignSelf: "center"
+    marginTop: 207,
+    marginLeft: 49
   },
-  text: {
+  signas: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     margin: 0,
     marginTop: 14
   },
-  group2: {
+  line1: {
     margin: 0,
     alignSelf: "stretch",
     flexDirection: "row",
@@ -136,11 +130,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
-  button2: {
+  mofficer: {
     alignItems: "center",
     margin: 10
   },
-  image2: {
+  offimg: {
     width: 70,
     height: 70
   },
@@ -150,11 +144,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 12
   },
-  button3: {
+  speci: {
     alignItems: "center",
     margin: 10
   },
-  image3: {
+  specimg: {
     width: 70,
     height: 70
   },
@@ -163,18 +157,18 @@ const styles = StyleSheet.create({
     color: "#121212",
     fontSize: 12
   },
-  group3: {
+  line2: {
     margin: 0,
     alignSelf: "stretch",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center"
   },
-  button4: {
+  diag: {
     alignItems: "center",
     margin: 10
   },
-  image4: {
+  diagimg: {
     width: 70,
     height: 70
   },
@@ -184,11 +178,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 12
   },
-  button5: {
+  pharm: {
     alignItems: "center",
     margin: 10
   },
-  image5: {
+  pharmimg: {
     width: 70,
     height: 70
   },
@@ -198,12 +192,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 12
   },
-  button6: {
+  ambu: {
     alignItems: "center",
     margin: 10,
     alignSelf: "center"
   },
-  image6: {
+  ambimg: {
     width: 70,
     height: 70,
     margin: 0

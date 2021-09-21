@@ -31,7 +31,7 @@ import Videocall from "./src/screens/Videocall";
 import Voicecall from "./src/screens/Voicecall";
 
 const DrawerNavigation = createDrawerNavigator({
-  Login: Login,
+  Appointments: Appointments,
   Centerinfo: Centerinfo,
   Chat: Chat,
   Chats: Chats,
@@ -44,7 +44,7 @@ const DrawerNavigation = createDrawerNavigator({
   Forgotpass: Forgotpass,
   Home: Home,
   Infospec: Infospec,
-  Appointments: Appointments,
+  Login: Login,
   Notif: Notif,
   Officers: Officers,
   Pharmacyinfo: Pharmacyinfo,
@@ -62,7 +62,7 @@ const StackNavigation = createStackNavigator(
     DrawerNavigation: {
       screen: DrawerNavigation
     },
-    Login: Login,
+    Appointments: Appointments,
     Centerinfo: Centerinfo,
     Chat: Chat,
     Chats: Chats,
@@ -75,7 +75,7 @@ const StackNavigation = createStackNavigator(
     Forgotpass: Forgotpass,
     Home: Home,
     Infospec: Infospec,
-    Appointments: Appointments,
+    Login: Login,
     Notif: Notif,
     Officers: Officers,
     Pharmacyinfo: Pharmacyinfo,
@@ -111,9 +111,9 @@ function App() {
 async function loadResourcesAsync() {
   await Promise.all([
     Font.loadAsync({
+      "comic-sans-ms-regular": require("./src/assets/fonts/comic-sans-ms-regular.ttf"),
       "roboto-700": require("./src/assets/fonts/roboto-700.ttf"),
-      "roboto-regular": require("./src/assets/fonts/roboto-regular.ttf"),
-      "comic-sans-ms-regular": require("./src/assets/fonts/comic-sans-ms-regular.ttf")
+      "roboto-regular": require("./src/assets/fonts/roboto-regular.ttf")
     })
   ]);
 }

@@ -17,47 +17,47 @@ function Signup(props) {
       <ImageBackground
         source={require("../assets/images/v870-tang-364.jpg")}
         resizeMode="cover"
-        style={styles.image}
-        imageStyle={styles.image_imageStyle}
+        style={styles.bg}
+        imageStyle={styles.bg_imageStyle}
       >
-        <View style={styles.group}>
+        <View style={styles.cont1}>
           <View style={styles.scrollArea}>
             <ScrollView
               horizontal={false}
               contentContainerStyle={styles.scrollArea_contentContainerStyle}
             >
               <MaterialStackedLabelTextbox
-                style={styles.materialStackedLabelTextbox}
+                style={styles.email}
               ></MaterialStackedLabelTextbox>
               <TextInput
                 placeholder="Password"
-                style={styles.placeholder}
+                style={styles.password}
               ></TextInput>
               <TextInput
                 placeholder="Confirm Password"
-                style={styles.textInput}
+                style={styles.cpassword}
               ></TextInput>
               <TextInput
                 placeholder="First Name"
-                style={styles.placeholder1}
+                style={styles.fname}
               ></TextInput>
               <TextInput
                 placeholder="Last Name"
-                style={styles.placeholder2}
+                style={styles.lname}
               ></TextInput>
               <TextInput
                 placeholder="Phone Number"
-                style={styles.placeholder3}
+                style={styles.pnumb}
               ></TextInput>
               <TextInput
                 placeholder="UserName"
-                style={styles.placeholder4}
+                style={styles.uname}
               ></TextInput>
               <TouchableOpacity
                 onPress={() => props.navigation.navigate("Home")}
-                style={styles.button1}
+                style={styles.signupbutt}
               >
-                <Text style={styles.text2}>Signup</Text>
+                <Text style={styles.stext}>Signup</Text>
               </TouchableOpacity>
             </ScrollView>
           </View>
@@ -71,11 +71,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  image: {
+  bg: {
     flex: 1
   },
-  image_imageStyle: {},
-  group: {
+  bg_imageStyle: {},
+  cont1: {
+    alignItems: "center",
+    justifyContent: "center",
     flex: 1
   },
   scrollArea: {
@@ -97,14 +99,14 @@ const styles = StyleSheet.create({
     height: 732,
     alignItems: "center"
   },
-  materialStackedLabelTextbox: {
-    height: 60,
+  email: {
+    height: 70,
     margin: 17,
-    alignSelf: "stretch",
     marginRight: 25,
-    marginLeft: 25
+    marginLeft: 25,
+    width: 245
   },
-  placeholder: {
+  password: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     height: 42,
@@ -119,7 +121,7 @@ const styles = StyleSheet.create({
     marginRight: 25,
     marginLeft: 25
   },
-  textInput: {
+  cpassword: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     height: 42,
@@ -134,7 +136,7 @@ const styles = StyleSheet.create({
     marginRight: 25,
     marginLeft: 25
   },
-  placeholder1: {
+  fname: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     height: 42,
@@ -149,7 +151,7 @@ const styles = StyleSheet.create({
     marginRight: 25,
     marginLeft: 25
   },
-  placeholder2: {
+  lname: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     height: 42,
@@ -164,7 +166,7 @@ const styles = StyleSheet.create({
     marginRight: 25,
     marginLeft: 25
   },
-  placeholder3: {
+  pnumb: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     height: 42,
@@ -179,7 +181,7 @@ const styles = StyleSheet.create({
     marginRight: 25,
     marginLeft: 25
   },
-  placeholder4: {
+  uname: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     height: 42,
@@ -194,7 +196,7 @@ const styles = StyleSheet.create({
     marginRight: 25,
     marginLeft: 25
   },
-  button1: {
+  signupbutt: {
     width: 100,
     height: 25,
     backgroundColor: "rgba(230, 230, 230,1)",
@@ -207,12 +209,14 @@ const styles = StyleSheet.create({
     elevation: 5,
     shadowOpacity: 0.24,
     shadowRadius: 0,
+    flexDirection: "row",
+    alignItems: "center",
     justifyContent: "center"
   },
-  text2: {
+  stext: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
-    alignSelf: "center"
+    fontSize: 12
   }
 });
 

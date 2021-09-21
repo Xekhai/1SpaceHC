@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   bookNow: {
     color: "#fff",
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: "comic-sans-ms-regular"
   }
 });

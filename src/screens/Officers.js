@@ -21,7 +21,7 @@ function Officers(props) {
         </View>
         <TouchableOpacity
           onPress={() => props.navigation.navigate("Infospec")}
-          style={styles.topc}
+          style={styles.group4}
         >
           <Image
             source={require("../assets/images/call-center-agent.png")}
@@ -130,15 +130,6 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(74,144,226,1)",
     borderRadius: 100
   },
-  topc: {
-    flexDirection: "row",
-    alignSelf: "center",
-    justifyContent: "center",
-    backgroundColor: "white",
-    borderRadius: 5,
-    padding:5,
-    elevation : 5
-  },
   image: {
     width: 80,
     height: 80
@@ -146,8 +137,27 @@ const styles = StyleSheet.create({
   group3: {
     width: 182,
     height: 62,
-    justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "center",
+    justifyContent: "space-between"
+  },
+  group4: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(255,255,255,1)",
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    elevation: 5,
+    shadowOpacity: 0.39,
+    shadowRadius: 0,
+    borderRadius: 5,
+    padding: 14,
+    width: 290,
+    alignSelf: "center",
+
+    height: 'auto'
   },
   loremIpsum: {
     fontFamily: "roboto-regular",

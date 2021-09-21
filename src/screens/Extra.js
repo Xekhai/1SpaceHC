@@ -9,8 +9,8 @@ import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 function Extra(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.group4Stack}>
-        <View style={styles.group4}>
+      <View style={styles.duperirrevStack}>
+        <View style={styles.duperirrev}>
           <View style={styles.group3}>
             <MaterialButtonShare3
               style={styles.materialButtonShare3}
@@ -72,37 +72,37 @@ function Extra(props) {
         <Center horizontal>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Pharmacyinfo")}
-            style={styles.button}
+            style={styles.info}
           >
             <Text style={styles.xcaPharmacy2}>XCA Pharmacy</Text>
-            <View style={styles.rect3}></View>
-            <View style={styles.group12}>
+            <View style={styles.div}></View>
+            <View style={styles.insshop}>
               <Image
                 source={require("../assets/images/check1.png")}
                 resizeMode="contain"
-                style={styles.image5}
+                style={styles.chcksh}
               ></Image>
               <Text style={styles.inStoreShopping}>In-store shopping</Text>
             </View>
-            <View style={styles.group13}>
+            <View style={styles.hdev}>
               <Image
                 source={require("../assets/images/check1.png")}
                 resizeMode="contain"
-                style={styles.image6}
+                style={styles.chckhde}
               ></Image>
               <Text style={styles.homeDelivery}>Home delivery</Text>
             </View>
-            <View style={styles.group14}>
+            <View style={styles.spkup}>
               <Image
                 source={require("../assets/images/check1.png")}
                 resizeMode="contain"
-                style={styles.image7}
+                style={styles.chckpkup}
               ></Image>
               <Text style={styles.storePickUp}>Store pick-up</Text>
             </View>
             <TouchableOpacity
               onPress={() => props.navigation.navigate("Pharmacyinfo")}
-              style={styles.button2}
+              style={styles.back}
             >
               <FontAwesomeIcon
                 name="chevron-left"
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  group4: {
+  duperirrev: {
     position: "absolute",
     left: 0,
     right: 0,
@@ -138,7 +138,8 @@ const styles = StyleSheet.create({
     margin: 0,
     marginRight: 20,
     marginLeft: 20,
-    marginTop: 40
+    marginTop: 40,
+    opacity: 0
   },
   xcaPharmacy: {
     fontFamily: "comic-sans-ms-regular",
@@ -316,7 +317,7 @@ const styles = StyleSheet.create({
     color: "rgba(128,128,128,1)",
     fontSize: 15
   },
-  button: {
+  info: {
     position: "absolute",
     backgroundColor: "rgba(255,255,255,1)",
     shadowColor: "rgba(0,0,0,1)",
@@ -337,20 +338,20 @@ const styles = StyleSheet.create({
     margin: 8,
     fontSize: 18
   },
-  rect3: {
+  div: {
     width: 240,
     height: 1,
     backgroundColor: "#E6E6E6",
     margin: 8
   },
-  group12: {
+  insshop: {
     flexDirection: "row",
     alignSelf: "stretch",
     alignItems: "center",
     justifyContent: "center",
     margin: 8
   },
-  image5: {
+  chcksh: {
     width: 10,
     height: 10
   },
@@ -358,14 +359,14 @@ const styles = StyleSheet.create({
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  group13: {
+  hdev: {
     flexDirection: "row",
     alignSelf: "stretch",
     alignItems: "center",
     justifyContent: "center",
     margin: 8
   },
-  image6: {
+  chckhde: {
     width: 10,
     height: 10
   },
@@ -373,14 +374,14 @@ const styles = StyleSheet.create({
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  group14: {
+  spkup: {
     flexDirection: "row",
     alignSelf: "stretch",
     alignItems: "center",
     justifyContent: "center",
     margin: 8
   },
-  image7: {
+  chckpkup: {
     width: 10,
     height: 10
   },
@@ -388,7 +389,7 @@ const styles = StyleSheet.create({
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  button2: {
+  back: {
     flexDirection: "row",
     alignSelf: "center",
     backgroundColor: "rgba(230, 230, 230,1)",
@@ -414,7 +415,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     margin: 0
   },
-  group4Stack: {
+  duperirrevStack: {
     height: 812
   }
 });

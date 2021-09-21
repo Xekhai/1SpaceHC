@@ -17,13 +17,13 @@ function Chat(props) {
       <ImageBackground
         source={require("../assets/images/BG-24.jpg")}
         resizeMode="cover"
-        style={styles.image2}
-        imageStyle={styles.image2_imageStyle}
+        style={styles.bg}
+        imageStyle={styles.bg_imageStyle}
       >
-        <View style={styles.group21}>
+        <View style={styles.cont}>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Chats")}
-            style={styles.button}
+            style={styles.head}
           >
             <FontAwesomeIcon
               name="arrow-left"
@@ -68,24 +68,24 @@ function Chat(props) {
               </View>
             </ScrollView>
           </View>
-          <View style={styles.group8}>
-            <View style={styles.group9}>
+          <View style={styles.mess}>
+            <View style={styles.message}>
               <TextInput
                 placeholder="Type a message..."
-                style={styles.placeholder}
+                style={styles.typmess}
               ></TextInput>
             </View>
             <Image
               source={require("../assets/images/send.png")}
               resizeMode="contain"
-              style={styles.image4}
+              style={styles.send}
             ></Image>
             <FontAwesomeIcon
               name="ellipsis-v"
-              style={styles.icon2}
+              style={styles.more}
             ></FontAwesomeIcon>
           </View>
-          <View style={styles.group14}>
+          <View style={styles.base}>
             <View style={styles.group19}>
               <View style={styles.group10}>
                 <View style={styles.group15}>
@@ -147,14 +147,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  image2: {
+  bg: {
     flex: 1
   },
-  image2_imageStyle: {},
-  group21: {
+  bg_imageStyle: {},
+  cont: {
     flex: 1
   },
-  button: {
+  head: {
     backgroundColor: "rgba(118,213,203,1)",
     width: 375,
     shadowColor: "rgba(0,0,0,1)",
@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
     margin: 10,
     alignSelf: "flex-end"
   },
-  group8: {
+  mess: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "rgba(230, 230, 230,1)",
@@ -312,7 +312,7 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     alignSelf: "stretch"
   },
-  group9: {
+  message: {
     flexDirection: "row",
     backgroundColor: "rgba(255,255,255,1)",
     padding: 8,
@@ -325,13 +325,13 @@ const styles = StyleSheet.create({
     marginLeft: 25,
     margin: 0
   },
-  placeholder: {
+  typmess: {
     fontFamily: "roboto-regular",
     color: "#121212",
     flex: 1,
     alignSelf: "stretch"
   },
-  image4: {
+  send: {
     width: 20,
     height: 20,
     marginTop: 8,
@@ -339,7 +339,7 @@ const styles = StyleSheet.create({
     marginRight: 0,
     marginLeft: 25
   },
-  icon2: {
+  more: {
     color: "rgba(128,128,128,1)",
     fontSize: 20,
     marginTop: 8,
@@ -347,7 +347,7 @@ const styles = StyleSheet.create({
     marginRight: 25,
     marginLeft: 25
   },
-  group14: {
+  base: {
     backgroundColor: "rgba(255,199,186,1)",
     alignSelf: "stretch"
   },

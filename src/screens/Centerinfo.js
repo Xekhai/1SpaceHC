@@ -17,13 +17,13 @@ function Centerinfo(props) {
   return (
     <View style={styles.container}>
       <View style={styles.group4}>
-        <TouchableOpacity
-          onPress={() => props.navigation.goBack()}
+        <View
           style={styles.button}
+        ><TouchableOpacity onPress={() => props.navigation.navigate("Dcenters1")}
         >
           <MaterialButtonShare3
             style={styles.materialButtonShare3}
-          ></MaterialButtonShare3>
+            ></MaterialButtonShare3></TouchableOpacity>
           <Text style={styles.loremIpsum}>XCA labs - OSD1267344</Text>
           <View style={styles.group2}>
             <Image
@@ -43,7 +43,7 @@ function Centerinfo(props) {
             ></Image>
             <Text style={styles.loremIpsum3}>5 years</Text>
           </View>
-        </TouchableOpacity>
+        </View>
         <View style={styles.scrollArea}>
           <ScrollView
             horizontal={false}

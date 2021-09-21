@@ -14,49 +14,49 @@ import IoniconsIcon from "react-native-vector-icons/Ionicons";
 function Infospec(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.group20}>
-        <View style={styles.group19}>
-          <View style={styles.group13}>
+      <View style={styles.bg}>
+        <View style={styles.header}>
+          <View style={styles.info}>
             <Image
               source={require("../assets/images/user2.png")}
               resizeMode="cover"
               style={styles.image3}
             ></Image>
-            <View style={styles.group14}>
-              <Text style={styles.loremIpsum6}>Osioxekhai Joshua Praise</Text>
-              <Text style={styles.phDmBcbB1}>PhD. MBcbB</Text>
+            <View style={styles.infoname}>
+              <Text style={styles.name}>Osioxekhai Joshua Praise</Text>
+              <Text style={styles.title}>PhD. MBcbB</Text>
               <Text style={styles.n1}>N25,000 /Hour</Text>
             </View>
           </View>
-          <View style={styles.group15}>
-            <View style={styles.group16}>
+          <View style={styles.teedt}>
+            <View style={styles.addr}>
               <FontAwesomeIcon
                 name="location-arrow"
                 style={styles.icon1}
               ></FontAwesomeIcon>
               <Text style={styles.lagosNigeria1}>Lagos, Nigeria.</Text>
             </View>
-            <View style={styles.group17}>
+            <View style={styles.tym}>
               <IoniconsIcon
                 name="ios-timer"
                 style={styles.icon2}
               ></IoniconsIcon>
-              <Text style={styles.loremIpsum7}>5 years</Text>
+              <Text style={styles.years}>5 years</Text>
             </View>
           </View>
-          <View style={styles.group18}>
+          <View style={styles.biodiv}>
             <View style={styles.rect9}></View>
             <Text style={styles.bio1}>Bio</Text>
             <View style={styles.rect10}></View>
           </View>
-          <Text style={styles.loremIpsum8}>
+          <Text style={styles.bio}>
             My significant experience in orthopedics has taught me two things.
             Remain current with the latest advances in orthopedic care and take
             the time to listen and understand the unique needs of each patient.
           </Text>
-          <View style={styles.rect11}></View>
+          <View style={styles.div}></View>
           <Text style={styles.averageRating1}>Average rating - 4.5</Text>
-          <View style={styles.group12}>
+          <View style={styles.revdiv}>
             <View style={styles.rect7}></View>
             <Text style={styles.reviews1}>Reviews</Text>
             <View style={styles.rect8}></View>
@@ -67,9 +67,9 @@ function Infospec(props) {
             horizontal={false}
             contentContainerStyle={styles.scrollArea_contentContainerStyle}
           >
-            <View style={styles.group11}>
-              <View style={styles.group10}>
-                <View style={styles.group9}>
+            <View style={styles.commhead}>
+              <View style={styles.comm}>
+                <View style={styles.namepic}>
                   <Image
                     source={require("../assets/images/whatsapp-image-2021-05-01-at-4.18.07-pm-696x1042.jpg")}
                     resizeMode="cover"
@@ -77,27 +77,21 @@ function Infospec(props) {
                   ></Image>
                   <Text style={styles.johnAdesogbon}>John Adesogbon</Text>
                 </View>
-                <Text style={styles.loremIpsum5}>5/5</Text>
+                <Text style={styles.ratin}>5/5</Text>
               </View>
-              <Text style={styles.loremIpsum4}>
+              <Text style={styles.commtxt}>
                 A very good Doctor, knew my problems before I even spoke.
                 Lovely, worth every penny.
               </Text>
             </View>
           </ScrollView>
         </View>
-        <View style={styles.group5}>
-          <TextInput
-            placeholder="05/08/2021"
-            style={styles.placeholder}
-          ></TextInput>
-          <TextInput
-            placeholder="9:37PM"
-            style={styles.placeholder1}
-          ></TextInput>
+        <View style={styles.base}>
+          <TextInput placeholder="05/08/2021" style={styles.date}></TextInput>
+          <TextInput placeholder="9:37PM" style={styles.time}></TextInput>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Appointments")}
-            style={styles.button}
+            style={styles.booknow}
           >
             <Text style={styles.bookNow}>Book Now</Text>
           </TouchableOpacity>
@@ -111,21 +105,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  group20: {
+  bg: {
     flex: 1
   },
-  group19: {
+  header: {
     alignSelf: "stretch",
-    justifyContent: "center",
     alignItems: "center"
   },
-  group13: {
+  info: {
     flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
     margin: 6,
     alignSelf: "stretch",
-    marginTop: 75
+    marginTop: 75,
+    justifyContent: "center",
+    alignItems: "center"
   },
   image3: {
     width: 80,
@@ -134,18 +127,17 @@ const styles = StyleSheet.create({
     marginRight: 14,
     marginLeft: 14
   },
-  group14: {
-    width: 160,
-    height: 59,
+  infoname: {
     justifyContent: "space-between",
     marginRight: 14,
-    marginLeft: 14
+    marginLeft: 14,
+    alignSelf: "center"
   },
-  loremIpsum6: {
+  name: {
     fontFamily: "roboto-700",
     color: "#121212"
   },
-  phDmBcbB1: {
+  title: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
@@ -153,19 +145,18 @@ const styles = StyleSheet.create({
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  group15: {
+  teedt: {
     flexDirection: "row",
     alignSelf: "stretch",
     margin: 8,
     justifyContent: "space-around"
   },
-  group16: {
-    width: 126,
-    height: 30,
+  addr: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    margin: 0
+    margin: 0,
+    alignSelf: "flex-start"
   },
   icon1: {
     color: "rgba(128,128,128,1)",
@@ -174,26 +165,26 @@ const styles = StyleSheet.create({
   lagosNigeria1: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
-    lineHeight: 12
+    fontSize: 12
+
   },
-  group17: {
-    width: 76,
-    height: 33,
+  tym: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    margin: 0
+    margin: 0,
+    alignSelf: "flex-start"
   },
   icon2: {
     color: "rgba(128,128,128,1)",
     fontSize: 25
   },
-  loremIpsum7: {
+  years: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
-    lineHeight: 12
+    fontSize: 12
   },
-  group18: {
+  biodiv: {
     width: 298,
     flexDirection: "row",
     alignItems: "center",
@@ -215,7 +206,7 @@ const styles = StyleSheet.create({
     height: 2,
     backgroundColor: "rgba(0,0,0,1)"
   },
-  loremIpsum8: {
+  bio: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     textAlign: "center",
@@ -225,7 +216,7 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     paddingLeft: 20
   },
-  rect11: {
+  div: {
     width: 298,
     height: 2,
     backgroundColor: "rgba(0,0,0,1)",
@@ -238,7 +229,7 @@ const styles = StyleSheet.create({
     margin: 6,
     alignSelf: "center"
   },
-  group12: {
+  revdiv: {
     width: 298,
     flexDirection: "row",
     alignItems: "center",
@@ -265,16 +256,16 @@ const styles = StyleSheet.create({
     alignSelf: "stretch"
   },
   scrollArea_contentContainerStyle: {
-    height: 325,
+    height: 331,
     alignItems: "center",
     justifyContent: "flex-start"
   },
-  group11: {
+  commhead: {
     width: 301,
     justifyContent: "space-between",
     margin: 6
   },
-  group10: {
+  comm: {
     width: 261,
     height: 40,
     flexDirection: "row",
@@ -282,7 +273,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignSelf: "center"
   },
-  group9: {
+  namepic: {
     width: 158,
     height: 40,
     flexDirection: "row",
@@ -298,17 +289,17 @@ const styles = StyleSheet.create({
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  loremIpsum5: {
+  ratin: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  loremIpsum4: {
+  commtxt: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     textAlign: "center",
     alignSelf: "stretch"
   },
-  group5: {
+  base: {
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
@@ -325,19 +316,19 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 5
   },
-  placeholder: {
+  date: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     height: 33,
     width: 80
   },
-  placeholder1: {
+  time: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     height: 33,
     width: 50
   },
-  button: {
+  booknow: {
     flexDirection: "row",
     width: 100,
     height: 25,

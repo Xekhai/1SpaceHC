@@ -9,9 +9,11 @@ import {
   ScrollView
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
-import { Center } from "@builderx/utils";
 import Svg, { Ellipse } from "react-native-svg";
 import MaterialBasicFooter from "../components/MaterialBasicFooter";
+import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
+import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import IoniconsIcon from "react-native-vector-icons/Ionicons";
 
 function Home(props) {
   return (
@@ -39,7 +41,6 @@ function Home(props) {
             >
               <Image
                 source={require("../assets/images/user1.png")}
-                resizeMode="contain"
                 style={styles.image13}
               ></Image>
               <Text style={styles.hiJoshua1}>Hi, Joshua</Text>
@@ -63,10 +64,7 @@ function Home(props) {
             >
               <View style={styles.group31}>
                 <View style={styles.group8}>
-                  <View style={styles.rect8}></View>
-                  <Center vertical>
-                    <Text style={styles.consultation}>Consultation</Text>
-                  </Center>
+                  <Text style={styles.consultation}>Consultation</Text>
                   <View style={styles.rect3}></View>
                 </View>
                 <View style={styles.rect21}>
@@ -322,9 +320,44 @@ function Home(props) {
             </ScrollView>
           </View>
           <View style={styles.group32}>
-            <MaterialBasicFooter
-              style={styles.materialBasicFooter}
-            ></MaterialBasicFooter>
+            <View style={styles.materialBasicFooter}>
+            <TouchableOpacity
+        onPress={() => console.log("Navigate to Home")}
+        style={styles.btnWrapper1}
+      >
+        <FontAwesomeIcon name="home" style={styles.icon1}></FontAwesomeIcon>
+        <Text style={styles.home}>Home</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => props.navigation.navigate("Chats")}
+        style={styles.activebtnWrapper}
+      >
+        <MaterialCommunityIconsIcon
+          name="message-text"
+          style={styles.activeIcon}
+        ></MaterialCommunityIconsIcon>
+        <Text style={styles.chats}>Chats</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => props.navigation.navigate("Settings")}
+        style={styles.btnWrapper2}
+      >
+        <IoniconsIcon name="md-settings" style={styles.icon2}></IoniconsIcon>
+        <Text style={styles.settings}>Settings</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btnWrapper3}
+             onPress={() => props.navigation.navigate("Notif")}
+ 
+      >
+        <Image
+          source={require("../assets/images/online-payment.png")}
+          resizeMode="contain"
+          style={styles.imagefoot}
+        ></Image>
+        <Text style={styles.payments}>Payments</Text>
+      </TouchableOpacity>
+
+            </View>
           </View>
         </View>
       </ImageBackground>
@@ -431,27 +464,26 @@ const styles = StyleSheet.create({
     alignSelf: "stretch"
   },
   group8: {
-    width: 306,
-    height: 17,
     flexDirection: "row",
-    margin: 5
-  },
-  rect8: {
-    flex: 1
+    margin: 5,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 365
   },
   consultation: {
-    left: 0,
-    position: "absolute",
     fontFamily: "comic-sans-ms-regular",
-    color: "#121212"
+    color: "#121212",
+    margin: 0,
+    marginRight: 5,
+    marginLeft: 5
   },
   rect3: {
-    width: 214,
-    height: 2,
-    position: "absolute",
+    width: 200,
+    height: 1,
     backgroundColor: "rgba(0,0,0,1)",
-    top: 8,
-    right: 0
+    margin: 0,
+    marginRight: 5,
+    marginLeft: 5
   },
   rect21: {
     width: 315,
@@ -623,16 +655,21 @@ const styles = StyleSheet.create({
     height: 17,
     flexDirection: "row",
     margin: 5,
-    alignItems: "center"
+    alignItems: "center",
+    justifyContent: "center"
   },
   services: {
     fontFamily: "comic-sans-ms-regular",
-    color: "#121212"
+    color: "#121212",
+    marginRight: 5,
+    marginLeft: 5
   },
   rect10: {
-    height: 2,
+    height: 1,
     backgroundColor: "rgba(0,0,0,1)",
-    flex: 1
+    marginRight: 5,
+    marginLeft: 5,
+    width: 200
   },
   group10: {
     width: 315,
@@ -801,20 +838,24 @@ const styles = StyleSheet.create({
     flex: 1
   },
   group17: {
-    width: 306,
-    height: 17,
     flexDirection: "row",
     margin: 5,
-    alignItems: "center"
+    alignItems: "center",
+    width: 365,
+    justifyContent: "center"
   },
   healthInformation: {
     fontFamily: "comic-sans-ms-regular",
-    color: "#121212"
+    color: "#121212",
+    marginRight: 5,
+    marginLeft: 5
   },
   rect16: {
-    height: 2,
+    height: 1,
     backgroundColor: "rgba(0,0,0,1)",
-    flex: 1
+    width: 175,
+    marginRight: 5,
+    marginLeft: 5
   },
   group18: {
     width: 315,
@@ -936,15 +977,98 @@ const styles = StyleSheet.create({
   },
   materialBasicFooter: {
     height: 56,
-    shadowColor: "rgba(0,0,0,1)",
+    backgroundColor: "rgba(255,255,255,1)",
+    flexDirection: "row",
+    alignItems: "center",
+    shadowColor: "#111",
     shadowOffset: {
-      height: 0,
-      width: 0
+      width: 0,
+      height: 0
     },
-    elevation: 5,
-    shadowOpacity: 0.38,
-    shadowRadius: 0,
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 15,
     alignSelf: "stretch"
+  },
+  btnWrapper1: {
+    flex: 1,
+    paddingTop: 8,
+    paddingBottom: 6,
+    paddingHorizontal: 12,
+    minWidth: 80,
+    maxWidth: 168,
+    alignItems: "center"
+  },
+  icon1: {
+    backgroundColor: "transparent",
+    color: "rgba(0,0,0,1)",
+    fontSize: 24,
+    opacity: 0.8
+  },
+  home: {
+    color: "rgba(0,0,0,1)",
+    opacity: 0.8,
+    alignSelf: "center"
+  },
+  activebtnWrapper: {
+    paddingTop: 6,
+    paddingBottom: 10,
+    paddingHorizontal: 12,
+    minWidth: 80,
+    maxWidth: 168,
+    alignItems: "center",
+    alignSelf: "stretch",
+    flex: 1,
+    justifyContent: "space-between"
+  },
+  activeIcon: {
+    backgroundColor: "transparent",
+    color: "rgba(0,0,0,1)",
+    fontSize: 24
+  },
+  chats: {
+    color: "rgba(0,0,0,1)",
+    fontSize: 14,
+    paddingTop: 4,
+    alignSelf: "center"
+  },
+  btnWrapper2: {
+    flex: 1,
+    paddingTop: 8,
+    paddingBottom: 6,
+    paddingHorizontal: 12,
+    minWidth: 80,
+    maxWidth: 168,
+    alignItems: "center"
+  },
+  icon2: {
+    backgroundColor: "transparent",
+    color: "rgba(0,0,0,1)",
+    fontSize: 24,
+    opacity: 0.8
+  },
+  settings: {
+    color: "rgba(0,0,0,1)",
+    opacity: 0.8
+  },
+  btnWrapper3: {
+    paddingTop: 8,
+    paddingBottom: 6,
+    paddingHorizontal: 12,
+    minWidth: 80,
+    maxWidth: 168,
+    alignItems: "center",
+    flex: 1,
+    alignSelf: "stretch",
+    justifyContent: "space-around"
+  },
+  imagefoot: {
+    width: 24,
+    height: 24
+  },
+  payments: {
+    color: "rgba(0,0,0,1)",
+    opacity: 0.8
   }
 });
 

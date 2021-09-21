@@ -6,23 +6,23 @@ import MaterialSwitch from "../components/MaterialSwitch";
 function Settings(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.group7}>
-        <View style={styles.group}>
+      <View style={styles.bg}>
+        <View style={styles.header}>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Home")}
-            style={styles.button1}
+            style={styles.back}
           >
             <FontAwesomeIcon
               name="chevron-left"
               style={styles.icon2}
             ></FontAwesomeIcon>
           </TouchableOpacity>
-          <Text style={styles.text}>Settings</Text>
+          <Text style={styles.setting}>Settings</Text>
         </View>
-        <View style={styles.group12}>
+        <View style={styles.opt}>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Edprofile")}
-            style={styles.button2}
+            style={styles.edprof}
           >
             <Text style={styles.editProfile}>Edit Profile</Text>
             <FontAwesomeIcon
@@ -32,7 +32,7 @@ function Settings(props) {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Forgotpass")}
-            style={styles.button3}
+            style={styles.cpassword}
           >
             <Text style={styles.changePassword}>Change Password</Text>
             <FontAwesomeIcon
@@ -40,17 +40,20 @@ function Settings(props) {
               style={styles.icon1}
             ></FontAwesomeIcon>
           </TouchableOpacity>
-          <View style={styles.rect}></View>
-          <View style={styles.group10}>
+          <View style={styles.div}></View>
+          <View style={styles.news}>
             <Text style={styles.newsAndUpdates}>News and Updates</Text>
             <MaterialSwitch style={styles.materialSwitch}></MaterialSwitch>
           </View>
-          <View style={styles.group11}>
-            <Text style={styles.pushNotifications1}>Push Notifications</Text>
-            <MaterialSwitch style={styles.materialSwitch1}></MaterialSwitch>
+          <View style={styles.upd}>
+            <Text style={styles.pushNotifications}>Push Notifications</Text>
+            <MaterialSwitch style={styles.materialSwitchpush}></MaterialSwitch>
           </View>
-          <View style={styles.rect2}></View>
-          <Text style={styles.logOut}>Log Out</Text>
+          <View style={styles.div2}></View>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate("Login")}>
+            <Text style={styles.logOut}>Log Out</Text>
+            </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -59,14 +62,13 @@ function Settings(props) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center"
+    flex: 1
   },
-  group7: {
+  bg: {
     alignItems: "center",
-    height: 812
+    flex: 1
   },
-  group: {
+  header: {
     backgroundColor: "rgba(118,213,203,1)",
     shadowColor: "rgba(0,0,0,1)",
     shadowOffset: {
@@ -77,10 +79,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.32,
     shadowRadius: 0,
     alignSelf: "stretch",
-    height: 150,
     justifyContent: "flex-end"
   },
-  button1: {
+  back: {
     flexDirection: "row",
     width: 50,
     height: 50,
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
     color: "rgba(128,128,128,1)",
     fontSize: 25
   },
-  text: {
+  setting: {
     fontFamily: "comic-sans-ms-regular",
     color: "rgba(255,255,255,1)",
     fontSize: 16,
@@ -111,11 +112,11 @@ const styles = StyleSheet.create({
     margin: 0,
     marginBottom: 10
   },
-  group12: {
+  opt: {
     alignSelf: "stretch",
     alignItems: "center"
   },
-  button2: {
+  edprof: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignSelf: "stretch",
@@ -134,7 +135,7 @@ const styles = StyleSheet.create({
     color: "rgba(128,128,128,1)",
     fontSize: 16
   },
-  button3: {
+  cpassword: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignSelf: "stretch",
@@ -153,7 +154,7 @@ const styles = StyleSheet.create({
     color: "rgba(128,128,128,1)",
     fontSize: 16
   },
-  rect: {
+  div: {
     width: 220,
     height: 1,
     backgroundColor: "#E6E6E6",
@@ -163,7 +164,7 @@ const styles = StyleSheet.create({
     marginRight: 34,
     marginLeft: 34
   },
-  group10: {
+  news: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignSelf: "stretch",
@@ -182,7 +183,7 @@ const styles = StyleSheet.create({
     width: 45,
     height: 23
   },
-  group11: {
+  upd: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignSelf: "stretch",
@@ -193,15 +194,15 @@ const styles = StyleSheet.create({
     marginLeft: 34,
     alignItems: "center"
   },
-  pushNotifications1: {
+  pushNotifications: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  materialSwitch1: {
+  materialSwitchpush: {
     width: 45,
     height: 23
   },
-  rect2: {
+  div2: {
     width: 220,
     height: 1,
     backgroundColor: "#E6E6E6",

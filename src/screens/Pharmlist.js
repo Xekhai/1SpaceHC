@@ -28,18 +28,9 @@ function Pharmlist(props) {
           ></Image>
           <View style={styles.group5}>
             <View style={styles.group2}>
-              <Text style={styles.xcaLabs}>XCA labs</Text>
-              <Svg viewBox="0 0 5 5" style={styles.ellipse}>
-                <Ellipse
-                  stroke="rgba(230, 230, 230,1)"
-                  strokeWidth={0}
-                  fill="rgba(0,0,0,1)"
-                  cx={3}
-                  cy={3}
-                  rx={3}
-                  ry={3}
-                ></Ellipse>
-              </Svg>
+              <Text style={styles.xcaLabs}>XCA Pharmacy</Text>
+              <View style={styles.ellipse}></View>
+
               <Text style={styles.loremIpsum}>2km away</Text>
             </View>
             <View style={styles.rect2}></View>
@@ -53,7 +44,7 @@ function Pharmlist(props) {
               <Image
                 source={require("../assets/images/check.png")}
                 resizeMode="contain"
-                style={styles.image3}
+                style={styles.image}
               ></Image>
               <Text style={styles.homeDelivery}>Home Delivery</Text>
             </View>
@@ -66,11 +57,10 @@ function Pharmlist(props) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center"
+    flex: 1
   },
   group7: {
-    height: 812
+    flex: 1
   },
   rect3: {
     alignSelf: "stretch",
@@ -132,7 +122,8 @@ const styles = StyleSheet.create({
     elevation: 5,
     shadowOpacity: 0.29,
     shadowRadius: 0,
-    justifyContent: "center"
+    justifyContent: "center",
+    alignItems: "center"
   },
   image2: {
     width: 60,
@@ -141,7 +132,6 @@ const styles = StyleSheet.create({
     margin: 10
   },
   group5: {
-    flex: 1,
     margin: 0,
     alignSelf: "center",
     alignItems: "center",
@@ -151,35 +141,41 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignSelf: "stretch",
     alignItems: "center",
-    justifyContent: "flex-start"
+    justifyContent: "center",
   },
   xcaLabs: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 18,
-    marginLeft: 5
+    marginLeft: 5,
+    maxWidth: 120
   },
   ellipse: {
-    width: 5,
+    marginLeft: 5,
     height: 5,
-    marginLeft: 5
+    width: 5,
+    borderRadius: 20,
+    backgroundColor: "black",
+
   },
   loremIpsum: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 18,
-    marginLeft: 5
+    marginLeft: 5,
+    maxWidth: 95
+
   },
   rect2: {
     height: 1,
     backgroundColor: "#E6E6E6",
-    alignSelf: "stretch"
+    alignSelf: "stretch",
+    marginHorizontal:15,
+    marginVertical:6
   },
   group4: {
     flexDirection: "row",
-    alignSelf: "stretch",
-    marginTop: 6,
-    alignItems: "center"
+    justifyContent: "center",
   },
   image: {
     width: 10,
@@ -190,13 +186,10 @@ const styles = StyleSheet.create({
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     margin: 0,
-    lineHeight: 8,
     fontSize: 12,
-    flex: 1,
     letterSpacing: 0,
     marginTop: 0,
     marginBottom: 0,
-    height: 12
   },
   image3: {
     width: 10,
@@ -207,13 +200,10 @@ const styles = StyleSheet.create({
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     margin: 0,
-    lineHeight: 8,
     fontSize: 12,
-    flex: 1,
     letterSpacing: 0,
     marginTop: 0,
     marginBottom: 0,
-    height: 12
   }
 });
 

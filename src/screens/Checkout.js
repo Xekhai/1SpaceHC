@@ -15,10 +15,10 @@ import MaterialCheckboxWithLabel2 from "../components/MaterialCheckboxWithLabel2
 function Checkout(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.group16}>
+      <View style={styles.bg}>
         <TouchableOpacity
           onPress={() => props.navigation.navigate("Pharmacyinfo")}
-          style={styles.button}
+          style={styles.header}
         >
           <Icon name="chevron-left" style={styles.icon}></Icon>
         </TouchableOpacity>
@@ -27,38 +27,38 @@ function Checkout(props) {
             horizontal={false}
             contentContainerStyle={styles.scrollArea_contentContainerStyle}
           >
-            <View style={styles.group19}>
-              <View style={styles.group13}>
+            <View style={styles.mcon}>
+              <View style={styles.cartdiv}>
                 <Text style={styles.cart}>Cart</Text>
-                <View style={styles.rect}></View>
+                <View style={styles.linediv}></View>
               </View>
-              <View style={styles.group11}>
-                <View style={styles.group10}>
+              <View style={styles.cartbox}>
+                <View style={styles.item1}>
                   <Image
                     source={require("../assets/images/GSO31400.webp")}
                     resizeMode="cover"
                     style={styles.image}
                   ></Image>
-                  <View style={styles.group9}>
-                    <View style={styles.group3}>
-                      <View style={styles.group2}>
+                  <View style={styles.info1}>
+                    <View style={styles.name}>
+                      <View style={styles.nameinfo}>
                         <Text style={styles.azithromycin}>Azithromycin</Text>
                         <Text style={styles.xcaPharmacy}>XCA Pharmacy</Text>
                       </View>
                       <MaterialButtonShare5
-                        style={styles.materialButtonShare5}
+                        style={styles.remove}
                       ></MaterialButtonShare5>
                     </View>
-                    <View style={styles.group6}>
-                      <View style={styles.group4}>
+                    <View style={styles.numb}>
+                      <View style={styles.rduce}>
                         <Text style={styles.loremIpsum3}>-</Text>
                       </View>
-                      <Text style={styles.loremIpsum2}>1</Text>
-                      <View style={styles.group5}>
+                      <Text style={styles.one}>1</Text>
+                      <View style={styles.add}>
                         <Text style={styles.loremIpsum4}>+</Text>
                       </View>
                     </View>
-                    <View style={styles.group8}>
+                    <View style={styles.hdev}>
                       <MaterialCheckboxWithLabel2
                         style={styles.materialCheckboxWithLabel2}
                       ></MaterialCheckboxWithLabel2>
@@ -66,8 +66,8 @@ function Checkout(props) {
                     </View>
                   </View>
                 </View>
-                <View style={styles.rect9}></View>
-                <View style={styles.group12}>
+                <View style={styles.div}></View>
+                <View style={styles.duper1}>
                   <Image
                     source={require("../assets/images/GSO31400.webp")}
                     resizeMode="cover"
@@ -101,30 +101,30 @@ function Checkout(props) {
                   </View>
                 </View>
               </View>
-              <View style={styles.group14}>
+              <View style={styles.sadddiv}>
                 <Text style={styles.shippingAddress}>Shipping Address</Text>
-                <View style={styles.rect10}></View>
+                <View style={styles.dv}></View>
               </View>
-              <View style={styles.group15}>
+              <View style={styles.address}>
                 <TextInput
                   placeholder="PiahConsult, Barth Road, Ibadan.  St. Anne's female hostel, University of Ibadan, Barth Road, 200284, Ibadan."
                   numberOfLines={0}
                   multiline={true}
                   maxLength={255}
-                  style={styles.placeholder}
+                  style={styles.addressinput}
                 ></TextInput>
               </View>
             </View>
           </ScrollView>
         </View>
-        <View style={styles.group18}>
-          <View style={styles.group17}>
+        <View style={styles.base}>
+          <View style={styles.tprice}>
             <Text style={styles.total}>Total:</Text>
             <Text style={styles.n32900}>N32,900</Text>
           </View>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Pharmacyinfo")}
-            style={styles.button2}
+            style={styles.proce}
           >
             <Text style={styles.proceed}>Proceed</Text>
           </TouchableOpacity>
@@ -138,23 +138,25 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  group16: {
+  bg: {
     alignItems: "center",
     flex: 1
   },
-  button: {
+  header: {
     paddingTop: 0,
     paddingLeft: 0,
     flexDirection: "row",
     alignSelf: "stretch",
-    backgroundColor: "rgba(118,213,203,1)"
+    backgroundColor: "rgba(118,213,203,1)",
+    alignItems: "flex-end"
   },
   icon: {
     color: "rgba(255,255,255,1)",
     fontSize: 30,
     marginTop: 62,
     marginLeft: 31,
-    marginBottom: 11
+    marginBottom: 11,
+    alignSelf: "flex-end"
   },
   scrollArea: {
     alignSelf: "stretch",
@@ -163,30 +165,30 @@ const styles = StyleSheet.create({
   scrollArea_contentContainerStyle: {
     height: 628
   },
-  group19: {
+  mcon: {
     alignSelf: "stretch"
   },
-  group13: {
+  cartdiv: {
     flexDirection: "row",
     alignItems: "center",
     marginTop: 20,
     paddingRight: 34,
-    paddingLeft: 34
+    paddingLeft: 34,
+    justifyContent: "center"
   },
   cart: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
-    marginRight: 11,
-    marginLeft: 11
+    margin: 0,
+    marginRight: 10
   },
-  rect: {
-    width: 220,
+  linediv: {
+    width: 200,
     height: 1,
     backgroundColor: "#E6E6E6",
-    marginRight: 11,
-    marginLeft: 11
+    margin: 0
   },
-  group11: {
+  cartbox: {
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "rgba(255,255,255,1)",
@@ -209,7 +211,7 @@ const styles = StyleSheet.create({
     marginRight: 25,
     marginLeft: 25
   },
-  group10: {
+  item1: {
     flexDirection: "row",
     marginBottom: 0,
     alignItems: "center",
@@ -225,17 +227,17 @@ const styles = StyleSheet.create({
     margin: 0,
     marginRight: 14
   },
-  group9: {
+  info1: {
     margin: 0
   },
-  group3: {
+  name: {
     flexDirection: "row",
     alignItems: "center",
     margin: 0,
     alignSelf: "stretch",
     justifyContent: "space-between"
   },
-  group2: {},
+  nameinfo: {},
   azithromycin: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
@@ -245,18 +247,18 @@ const styles = StyleSheet.create({
     fontFamily: "comic-sans-ms-regular",
     color: "rgba(191,191,191,1)"
   },
-  materialButtonShare5: {
+  remove: {
     height: 40,
     width: 40
   },
-  group6: {
+  numb: {
     flexDirection: "row",
     alignItems: "center",
     margin: 0,
     alignSelf: "stretch",
     marginTop: 5
   },
-  group4: {
+  rduce: {
     width: 20,
     height: 20,
     backgroundColor: "rgba(230, 230, 230,1)",
@@ -270,13 +272,13 @@ const styles = StyleSheet.create({
     fontFamily: "roboto-regular",
     color: "#121212"
   },
-  loremIpsum2: {
+  one: {
     fontFamily: "roboto-regular",
     color: "#121212",
     marginRight: 5,
     marginLeft: 0
   },
-  group5: {
+  add: {
     width: 20,
     height: 20,
     backgroundColor: "rgba(230, 230, 230,1)",
@@ -290,7 +292,7 @@ const styles = StyleSheet.create({
     fontFamily: "roboto-regular",
     color: "#121212"
   },
-  group8: {
+  hdev: {
     flexDirection: "row",
     alignItems: "center",
     margin: 0,
@@ -305,13 +307,13 @@ const styles = StyleSheet.create({
     color: "rgba(35,171,108,1)",
     marginLeft: 40
   },
-  rect9: {
+  div: {
     width: 220,
     height: 1,
     backgroundColor: "#E6E6E6",
     marginTop: 10
   },
-  group12: {
+  duper1: {
     flexDirection: "row",
     marginBottom: 0,
     alignItems: "center",
@@ -409,7 +411,7 @@ const styles = StyleSheet.create({
     color: "rgba(35,171,108,1)",
     marginLeft: 40
   },
-  group14: {
+  sadddiv: {
     flexDirection: "row",
     alignItems: "center",
     alignSelf: "stretch",
@@ -423,14 +425,14 @@ const styles = StyleSheet.create({
     marginRight: 11,
     marginLeft: 11
   },
-  rect10: {
+  dv: {
     height: 1,
     backgroundColor: "#E6E6E6",
     marginRight: 11,
     marginLeft: 11,
     flex: 1
   },
-  group15: {
+  address: {
     height: 100,
     alignSelf: "stretch",
     margin: 0,
@@ -447,14 +449,14 @@ const styles = StyleSheet.create({
     marginRight: 28,
     marginLeft: 28
   },
-  placeholder: {
+  addressinput: {
     fontFamily: "roboto-regular",
     color: "#121212",
     height: 64,
     flex: 1,
     margin: 20
   },
-  group18: {
+  base: {
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
@@ -470,7 +472,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 5
   },
-  group17: {
+  tprice: {
     width: 106,
     height: 19,
     flexDirection: "row"
@@ -485,7 +487,7 @@ const styles = StyleSheet.create({
     color: "rgba(118,213,203,1)",
     fontSize: 18
   },
-  button2: {
+  proce: {
     flexDirection: "row",
     alignSelf: "flex-start",
     margin: 0,

@@ -29,44 +29,17 @@ function Dcenters1(props) {
           <View style={styles.group5}>
             <View style={styles.group2}>
               <Text style={styles.xcaLabs}>XCA labs</Text>
-              <Svg viewBox="0 0 5 5" style={styles.ellipse}>
-                <Ellipse
-                  stroke="rgba(230, 230, 230,1)"
-                  strokeWidth={0}
-                  fill="rgba(0,0,0,1)"
-                  cx={3}
-                  cy={3}
-                  rx={3}
-                  ry={3}
-                ></Ellipse>
-              </Svg>
+              <View style={styles.ellipse}></View>
+
               <Text style={styles.loremIpsum}>2km away</Text>
             </View>
             <View style={styles.rect2}></View>
             <View style={styles.group3}>
-              <Svg viewBox="0 0 5 5" style={styles.ellipse1}>
-                <Ellipse
-                  stroke="rgba(230, 230, 230,1)"
-                  strokeWidth={0}
-                  fill="rgba(0,0,0,1)"
-                  cx={3}
-                  cy={3}
-                  rx={3}
-                  ry={3}
-                ></Ellipse>
-              </Svg>
+            <View style={styles.ellipse}></View>
+
               <Text style={styles.pathology}>Pathology</Text>
-              <Svg viewBox="0 0 5 5" style={styles.ellipse2}>
-                <Ellipse
-                  stroke="rgba(230, 230, 230,1)"
-                  strokeWidth={0}
-                  fill="rgba(0,0,0,1)"
-                  cx={3}
-                  cy={3}
-                  rx={3}
-                  ry={3}
-                ></Ellipse>
-              </Svg>
+              <View style={styles.ellipse}></View>
+              
               <Text style={styles.imaging}>Imaging</Text>
             </View>
             <View style={styles.group4}>
@@ -75,7 +48,7 @@ function Dcenters1(props) {
                 resizeMode="contain"
                 style={styles.image}
               ></Image>
-              <Text style={styles.text}>
+              <Text style={styles.loremIpsum2}>
                 No. 7 Arulogun Close, Awosika Ave, Bodija, Ibadan
               </Text>
             </View>
@@ -151,7 +124,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignSelf: "stretch",
     alignItems: "center",
-    justifyContent: "flex-start"
+    justifyContent: "center"
   },
   xcaLabs: {
     fontFamily: "comic-sans-ms-regular",
@@ -160,9 +133,12 @@ const styles = StyleSheet.create({
     marginLeft: 5
   },
   ellipse: {
-    width: 5,
+    marginLeft: 5,
     height: 5,
-    marginLeft: 5
+    width: 5,
+    borderRadius: 20,
+    backgroundColor: "black",
+
   },
   loremIpsum: {
     fontFamily: "comic-sans-ms-regular",
@@ -173,58 +149,52 @@ const styles = StyleSheet.create({
   rect2: {
     height: 1,
     backgroundColor: "#E6E6E6",
-    alignSelf: "stretch"
+    alignSelf: "stretch",
+    marginVertical: 2
   },
   group3: {
     flexDirection: "row",
     alignSelf: "stretch",
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     marginTop: 5
-  },
-  ellipse1: {
-    width: 5,
-    height: 5,
-    marginLeft: 5
   },
   pathology: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     marginLeft: 5,
-    lineHeight: 12
+    fontSize: 12,
+
   },
   ellipse2: {
     width: 5,
     height: 5,
-    marginLeft: 5
+    marginLeft: 5,
+
   },
   imaging: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     marginLeft: 5,
-    lineHeight: 12
+    fontSize: 12,
+
   },
   group4: {
     flexDirection: "row",
     alignSelf: "stretch",
-    marginTop: 6
+    marginTop: 6,
+    alignItems: "center"
   },
   image: {
     width: 10,
     height: 10,
     margin: 2
   },
-  text: {
+  loremIpsum2: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
-    margin: 0,
-    lineHeight: 8,
     fontSize: 12,
-    alignSelf: "flex-start",
-    flex: 1,
-    letterSpacing: 0,
-    marginTop: 0,
-    marginBottom: 0
+    flex: 1
   }
 });
 

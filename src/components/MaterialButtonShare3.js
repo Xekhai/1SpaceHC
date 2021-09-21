@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet, View } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 function MaterialButtonShare3(props) {
   return (
-    <TouchableOpacity style={[styles.container, props.style]}>
+    <View style={[styles.container, props.style]}>
       <Icon name="chevron-left" style={styles.icon}></Icon>
-    </TouchableOpacity>
+    </View>
   );
 }
 

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { StyleSheet, TouchableOpacity, Text } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 
 function MaterialButtonPurple(props) {
   return (
-    <TouchableOpacity style={[styles.container, props.style]}>
+    <View style={[styles.container, props.style]}>
       <Text style={styles.chat}>Chat</Text>
-    </TouchableOpacity>
+    </View>
   );
 }
 

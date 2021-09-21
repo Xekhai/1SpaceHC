@@ -7,85 +7,88 @@ import EntypoIcon from "react-native-vector-icons/Entypo";
 function Pharmacyinfo(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.group4}>
-        <View style={styles.group3}>
+      <View style={styles.bg}>
+        <View style={styles.header}>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Pharmlist")}
-            style={styles.button3}
+            style={styles.back}
           >
             <FontAwesomeIcon
               name="chevron-left"
-              style={styles.icon2}
+              style={styles.left}
             ></FontAwesomeIcon>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Extra")}
-            style={styles.button5}
+            style={styles.extrainfo}
           >
             <Text style={styles.xcaPharmacy}>XCA Pharmacy</Text>
           </TouchableOpacity>
-          <View style={styles.group2}>
+          <View style={styles.address}>
             <Image
               source={require("../assets/images/location.png")}
               resizeMode="contain"
-              style={styles.image}
+              style={styles.locpin}
             ></Image>
-            <Text style={styles.loremIpsum2}>
+            <Text style={styles.addtext}>
               No. 7 Arulogun Close, Awosika Ave, Bodija, Ibadan
             </Text>
           </View>
           <CupertinoSearchBarBasic
-            style={styles.cupertinoSearchBarBasic}
+            style={styles.searchBarBasic}
           ></CupertinoSearchBarBasic>
         </View>
-        <View style={styles.group10}>
+        <View style={styles.catdiv}>
           <Text style={styles.categories2}>Categories</Text>
-          <View style={styles.rect2}></View>
+          <View style={styles.linedivcat}></View>
         </View>
-        <View style={styles.group9}>
+        <View style={styles.categoriescont}>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Checkout")}
-            style={styles.button2}
+            style={styles.skcare}
           >
             <Image
               source={require("../assets/images/skin-care.png")}
               resizeMode="contain"
-              style={styles.image2}
+              style={styles.skimg}
             ></Image>
             <Text style={styles.skinCare}>Skin Care</Text>
           </TouchableOpacity>
-          <View style={styles.group8}>
+          <View style={styles.chstuff}>
             <Image
               source={require("../assets/images/playtime.png")}
               resizeMode="contain"
-              style={styles.image3}
+              style={styles.chimg}
             ></Image>
             <Text style={styles.childrenStuff}>Children Stuff</Text>
           </View>
-          <View style={styles.group7}>
+          <View style={styles.faid}>
             <Image
               source={require("../assets/images/pharmacy_(2).png")}
               resizeMode="contain"
-              style={styles.image4}
+              style={styles.faimg}
             ></Image>
             <Text style={styles.firstAid}>First Aid</Text>
           </View>
         </View>
-        <View style={styles.group5}>
+        <View style={styles.prescdiv}>
           <Text style={styles.prescriptions}>Prescriptions</Text>
-          <View style={styles.rect}></View>
-        </View>
-        <View style={styles.group11}>
-          <Text style={styles.loremIpsum3}>#121463</Text>
-          <EntypoIcon name="chevron-right" style={styles.icon}></EntypoIcon>
+          <View style={styles.linedivpresc}></View>
         </View>
         <TouchableOpacity
+          onPress={() => props.navigation.navigate("Pharmacyinfo")}
+          style={styles.presc}
+        >
+          <Text style={styles.prescnum}>#121463</Text>
+          <EntypoIcon name="chevron-right" style={styles.right}></EntypoIcon>
+        </TouchableOpacity>
+        <TouchableOpacity
           onPress={() => props.navigation.navigate("Checkout")}
-          style={styles.button4}
+          style={styles.chckout}
         >
           <FontAwesomeIcon
             name="shopping-cart"
-            style={styles.icon3}
+            style={styles.cart}
           ></FontAwesomeIcon>
         </TouchableOpacity>
       </View>
@@ -97,14 +100,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  group4: {
+  bg: {
     flex: 1
   },
-  group3: {
+  header: {
     backgroundColor: "rgba(118,213,203,1)",
     alignSelf: "stretch"
   },
-  button3: {
+  back: {
     flexDirection: "row",
     alignSelf: "flex-start",
     width: 50,
@@ -124,12 +127,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
-  icon2: {
+  left: {
     color: "rgba(128,128,128,1)",
     fontSize: 25,
     alignSelf: "center"
   },
-  button5: {
+  extrainfo: {
     alignSelf: "flex-start"
   },
   xcaPharmacy: {
@@ -141,7 +144,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginTop: 10
   },
-  group2: {
+  address: {
     flexDirection: "row",
     margin: 0,
     marginRight: 20,
@@ -150,25 +153,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 10
   },
-  image: {
+  locpin: {
     width: 15,
     height: 15,
     marginRight: 6
   },
-  loremIpsum2: {
+  addtext: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 10,
     marginRight: 6
   },
-  cupertinoSearchBarBasic: {
+  searchBarBasic: {
     height: 44,
     marginRight: 17,
     marginLeft: 17,
     alignSelf: "stretch",
     marginBottom: 5
   },
-  group10: {
+  catdiv: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -178,19 +181,23 @@ const styles = StyleSheet.create({
   },
   categories2: {
     fontFamily: "comic-sans-ms-regular",
-    color: "#121212"
+    color: "#121212",
+    marginRight: 5,
+    marginLeft: 5
   },
-  rect2: {
-    width: 222,
+  linedivcat: {
+    width: 200,
     height: 1,
-    backgroundColor: "#E6E6E6"
+    backgroundColor: "#E6E6E6",
+    marginRight: 5,
+    marginLeft: 5
   },
-  group9: {
+  categoriescont: {
     height: 108,
     flexDirection: "row",
     alignSelf: "stretch"
   },
-  button2: {
+  skcare: {
     width: 100,
     height: 100,
     alignItems: "center",
@@ -208,7 +215,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 0
   },
-  image2: {
+  skimg: {
     width: 50,
     height: 50,
     margin: 5
@@ -219,7 +226,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     margin: 5
   },
-  group8: {
+  chstuff: {
     width: 100,
     height: 100,
     justifyContent: "center",
@@ -237,7 +244,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 0
   },
-  image3: {
+  chimg: {
     width: 50,
     height: 50,
     margin: 5
@@ -248,7 +255,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     margin: 5
   },
-  group7: {
+  faid: {
     width: 100,
     height: 100,
     justifyContent: "center",
@@ -266,7 +273,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 0
   },
-  image4: {
+  faimg: {
     width: 50,
     height: 50,
     margin: 5
@@ -277,7 +284,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     margin: 5
   },
-  group5: {
+  prescdiv: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -287,28 +294,32 @@ const styles = StyleSheet.create({
   },
   prescriptions: {
     fontFamily: "comic-sans-ms-regular",
-    color: "#121212"
+    color: "#121212",
+    marginRight: 5,
+    marginLeft: 5
   },
-  rect: {
-    width: 222,
+  linedivpresc: {
+    width: 200,
     height: 1,
-    backgroundColor: "#E6E6E6"
+    backgroundColor: "#E6E6E6",
+    marginRight: 5,
+    marginLeft: 5
   },
-  group11: {
+  presc: {
     flexDirection: "row",
     alignSelf: "stretch",
     alignItems: "center",
     marginLeft: 42
   },
-  loremIpsum3: {
+  prescnum: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212"
   },
-  icon: {
+  right: {
     color: "rgba(128,128,128,1)",
     fontSize: 15
   },
-  button4: {
+  chckout: {
     position: "absolute",
     right: 33,
     bottom: 45,
@@ -324,7 +335,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.24,
     shadowRadius: 0
   },
-  icon3: {
+  cart: {
     color: "rgba(255,255,255,1)",
     fontSize: 40,
     margin: 11
