@@ -24,7 +24,7 @@ function Login(props) {
           <MaterialStackedLabelTextbox
             style={styles.emaiinp}
           ></MaterialStackedLabelTextbox>
-          <TextInput placeholder="Password" style={styles.password}></TextInput>
+          <TextInput placeholder="Password" secureTextEntry={true} style={styles.password}></TextInput>
           <TouchableOpacity
             onPress={() => props.navigation.navigate("Home")}
             style={styles.loginho}
@@ -91,9 +91,11 @@ const styles = StyleSheet.create({
   password: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
-    height: 30,
     width: 227,
-    margin: 10
+	height: 40,
+    margin: 10,
+	borderBottomWidth:1,
+	borderColor: "#e3e3e3"
   },
   loginho: {
     width: 100,
@@ -131,7 +133,9 @@ const styles = StyleSheet.create({
   logInWith: {
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
-    margin: 2
+    margin: 2,
+	fontSize: 12
+
   },
   sociallog: {
     flexDirection: "row",

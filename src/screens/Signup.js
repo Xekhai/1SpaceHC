@@ -31,10 +31,12 @@ function Signup(props) {
               ></MaterialStackedLabelTextbox>
               <TextInput
                 placeholder="Password"
+				secureTextEntry={true}
                 style={styles.password}
               ></TextInput>
               <TextInput
                 placeholder="Confirm Password"
+				secureTextEntry={true}
                 style={styles.cpassword}
               ></TextInput>
               <TextInput

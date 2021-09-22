@@ -31,7 +31,7 @@ import Videocall from "./src/screens/Videocall";
 import Voicecall from "./src/screens/Voicecall";
 
 const DrawerNavigation = createDrawerNavigator({
-  Appointments: Appointments,
+  Login: Login,
   Centerinfo: Centerinfo,
   Chat: Chat,
   Chats: Chats,
@@ -44,7 +44,7 @@ const DrawerNavigation = createDrawerNavigator({
   Forgotpass: Forgotpass,
   Home: Home,
   Infospec: Infospec,
-  Login: Login,
+  Appointments: Appointments,
   Notif: Notif,
   Officers: Officers,
   Pharmacyinfo: Pharmacyinfo,
